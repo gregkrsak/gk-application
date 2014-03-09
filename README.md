@@ -6,13 +6,25 @@ A simple framework for creating applications in Ruby
 
 An instance of ```GK::Application``` allows you to easily mange your Ruby application's lifecycle, with minimal fuss
 
+Install with gem
+----------------
+
 Quick installation with ```gem```:
 
 ```bash
 gem install gk-application
 ```
 
-Need a project template? No problem. Just fire-up ```irb```:
+Get started with a new project
+------------------------------
+
+Need a project template? No problem:
+
+```bash
+ruby -e 'require "gk-application"' -e 'GK::Application.new.project'
+```
+
+Or using ```irb```:
 
 ```
 $ irb
@@ -24,6 +36,9 @@ irb(main):003:0> quit
 ```
 
 And you'll have a brand-new ```my_app.rb``` ready to go in the current folder!
+
+Here's what an application looks like
+-------------------------------------
 
 ```ruby
 #!/usr/bin/env ruby
@@ -55,4 +70,5 @@ end
 
 
 my_app.state = :starting
+
 ```
