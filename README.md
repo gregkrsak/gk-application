@@ -4,7 +4,7 @@ Gem: gk-application
 A simple framework for creating applications in Ruby
 ----------------------------------------------------
 
-An instance of ```GK::Application``` allows you to easily mange your Ruby application's lifecycle, with minimal fuss
+An instance of ```GK::Application``` allows you to easily mange your Ruby application's state, with minimal fuss. Supported states are ```:starting```, ```:running```, ```:stopping``` and ```:stopped```.
 
 Install with gem
 ----------------
