@@ -1,6 +1,8 @@
 Gem: gk-application
 ===================
 
+[![Gem Version](https://badge.fury.io/rb/gk-application.png)](http://badge.fury.io/rb/gk-application)
+
 A simple framework for creating applications in Ruby
 ----------------------------------------------------
 
