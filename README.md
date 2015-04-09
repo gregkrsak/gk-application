@@ -51,24 +51,24 @@ require 'gk-application'
 my_app = GK::Application.new
 
 
-my_app.on_starting = Proc.new do
+my_app.on_starting = proc {
   puts 'Starting.'
   my_app.state = :running
-end
+}
 
-my_app.on_running = Proc.new do
+my_app.on_running = proc {
   puts 'Running.'
   my_app.state = :stopping
-end
+}
 
-my_app.on_stopping = Proc.new do
+my_app.on_stopping = proc {
   puts 'Stopping.'
   my_app.state = :stopped
-end
+}
 
-my_app.on_stopped = Proc.new do
+my_app.on_stopped = proc {
   puts 'Stopped.'
-end
+}
 
 
 my_app.state = :starting
