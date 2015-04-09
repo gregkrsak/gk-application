@@ -23,18 +23,20 @@ Get started with a new project
 Need a project template? No problem:
 
 ```bash
-ruby -e 'require "gk-application"' -e 'GK::Application.new.project'
+ruby -e 'require "rubygems"; require "gk-application"' -e 'GK::Application.new.project'
 ```
 
 Or using ```irb```:
 
 ```
 $ irb
-irb(main):001:0> require 'gk-application'
+irb(main):001:0> require 'rubygems'
 => true
-irb(main):002:0> GK::Application.new.project
+irb(main):002:0> require 'gk-application'
+=> true
+irb(main):003:0> GK::Application.new.project
 => nil
-irb(main):003:0> quit
+irb(main):004:0> quit
 ```
 
 And you'll have a brand-new ```my_app.rb``` ready to go in the current folder!
