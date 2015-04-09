@@ -42,16 +42,16 @@ class Application
   end
   def state=(new_state)
     case new_state
-      when :starting
-        @on_starting.call
-      when :running
-        @on_running.call
-      when :stopping
-        @on_stopping.call
-      when :stopped
-        @on_stopped.call
-      else
-        raise MSG_INVALID_STATE
+    when :starting
+      @on_starting.call
+    when :running
+      @on_running.call
+    when :stopping
+      @on_stopping.call
+    when :stopped
+      @on_stopped.call
+    else
+      raise MSG_INVALID_STATE
     end
   end
 
