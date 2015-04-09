@@ -4,19 +4,19 @@
 # A simple framework for creating applications in Ruby
 #
 # Copyright 2014 Greg M. Krsak (greg.krsak@gmail.com)
-# 
+#
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
-# 
+#
 #     http://www.apache.org/licenses/LICENSE-2.0
-# 
+#
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-# 
+#
 
 require 'fileutils'
 
@@ -64,11 +64,11 @@ class Application
   # This is run once every time an Application instance is created
   def initialize
     # Initialize event handlers
-    @on_starting = Proc.new do 
-      state = :running 
+    @on_starting = Proc.new do
+      state = :running
     end
-    @on_running = Proc.new do 
-      state = :stopping 
+    @on_running = Proc.new do
+      state = :stopping
     end
     @on_stopping = Proc.new do
       state = :stopped
@@ -81,7 +81,7 @@ class Application
   # This creates a new GK::Application project.
   # The new application will be called "my_app.rb" and be placed in the
   # current directory unless otherwise specified.
-  def project(name: TEMPLATE_PROJECT)
+  def project(name = TEMPLATE_PROJECT)
     # Get the path for the gk-application gem
     spec = Gem::Specification.find_by_name(GEM_NAME)
     gem_root = spec.gem_dir
