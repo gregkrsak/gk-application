@@ -13,6 +13,7 @@ Gem::Specification.new do |s|
   s.description = "An instance of GK::Application allows you to easily mange your Ruby application's state, with minimal fuss. Supported states are :starting, :running, :stopping and :stopped."
   s.license     = 'Apache-2'
 
+  s.required_ruby_version = '>= 2.0.0'
   s.required_rubygems_version = '>= 2.0.0'
 
   s.files        = Dir.glob("{bin,lib}/**/*") + %w(LICENSE README.md my_app.rb)
